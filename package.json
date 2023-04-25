@@ -1,0 +1,23 @@
+{
+  "name": "a02-functions-roray02",
+  "version": "1.0.0",
+  "description": "A package that gives the daily preceipitation for the day",
+  "main": "galosh.js",
+  "scripts": {
+    "test": "node cli.js -n 35.92 -w 79.05 -z America/New_York"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a02-functions-roray02.git"
+  },
+  "bin": {
+    "galosh.js": "./cli.js"
+  },
+  "type": "module",
+  "author": "Rohan Ray",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a02-functions-roray02/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a02-functions-roray02#readme"
+}
