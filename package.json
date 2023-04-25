@@ -16,6 +16,11 @@
   "type": "module",
   "author": "Rohan Ray",
   "license": "GPL-3.0",
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "moment-timezone": "^0.5.41",
+    "node-fetch": "^3.3.0"
+  },
   "bugs": {
     "url": "https://github.com/comp426-2023-spring/a02-functions-roray02/issues"
   },
