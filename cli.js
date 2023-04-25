@@ -30,9 +30,31 @@ if (args.h) {
     }
 }
 
+let latitude, longitude;
+if (args.n && args.s){
+	console.log("Either N or S latitude");
+	process.exit(0);
+} else if (args.n) {
+	latitude = args.n;
+} else if (args.s) {
+	latitude = -args.s;
+} else {
+	console.log("Latitude out of range");
+	process.exit(0);
+}
 
-const latitude = (args.n * 1.0 || -1.0 * args.s);
-const longitude = (args.e * 1.0 || -1.0 * args.w);
+if (args.e && args.w){
+	console.log("Only E or W longitude");
+	process.exit(0);
+} else if (args.e){
+	longitude = args.e;
+} else if (args.w) {
+	longitude = -args.w;
+} else {
+	console.log("Longitude out of range");
+	process.exit(0);
+}
+
 const url ="https://api.open-meteo.com/v1/forecast?latitude=" + latitude + "&longitude=" + longitude + "&timezone=" + timezone + "&daily=precipitation_hours";
 const response = await fetch(url);
 
@@ -54,8 +76,7 @@ if(days == 0){
     output += "tomorrow.";
 }
 
-const json = args.j;
-if (json) {
+if (args.j) {
     console.log(data);
     process.exit(0);
 } else {
